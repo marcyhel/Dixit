@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:photo_view/photo_view.dart';
+//import 'package:photo_view/photo_view.dart';
 
+// ignore: must_be_immutable
 class VisualizarCard extends StatefulWidget {
   String img;
   VisualizarCard(this.img);
@@ -16,8 +17,7 @@ class _VisualizarCardState extends State<VisualizarCard> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
-        body: PhotoView(
-          imageProvider: AssetImage(img),
-        ));
+        body: Text('d')
+        );
   }
 }

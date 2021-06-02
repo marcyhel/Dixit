@@ -1,6 +1,6 @@
 import 'package:dixit/screen/galeria/componente/visualizarCard.dart';
 import 'package:flutter/material.dart';
-import 'package:image_viewer/image_viewer.dart';
+
 
 class Miniatura extends StatelessWidget {
   String img;
@@ -9,10 +9,7 @@ class Miniatura extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => VisualizarCard('image/$img.jpg')));
+        Navigator.push(context,MaterialPageRoute(builder: (context) => VisualizarCard('image/$img.jpg')));
       },
       child: Card(
         elevation: 4,
