@@ -80,7 +80,10 @@ flutter:
     - image/19.jpg
     - image/20.jpg
     - image/21.jpg
-    
+    - image/avatar/0av.jpg
+    - image/avatar/1av.jpg
+    - image/avatar/2av.jpg
+    - image/avatar/3av.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

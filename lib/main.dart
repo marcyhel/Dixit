@@ -7,10 +7,11 @@ void main() {
   singletonsApp();
   runApp(MyApp());
 }
+
 void singletonsApp() {
   GetIt.I.registerSingleton(User_Mob());
-  
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(),
+          bodyText2: TextStyle(),
+        ).apply(
+          bodyColor: Colors.black38,
+          displayColor: Colors.blue,
+        ),
       ),
       home: Principal(),
     );

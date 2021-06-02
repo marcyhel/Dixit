@@ -6,7 +6,9 @@ class Galeria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
+        backgroundColor: Color(0xffD9653B),
         title: Text("Galeria"),
         centerTitle: true,
       ),

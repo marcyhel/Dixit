@@ -9,16 +9,31 @@ part of 'user_mob.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$User_Mob on _User_Mob, Store {
+  final _$paginaAtom = Atom(name: '_User_Mob.pagina');
+
+  @override
+  int get pagina {
+    _$paginaAtom.reportRead();
+    return super.pagina;
+  }
+
+  @override
+  set pagina(int value) {
+    _$paginaAtom.reportWrite(value, super.pagina, () {
+      super.pagina = value;
+    });
+  }
+
   final _$usuarios_listAtom = Atom(name: '_User_Mob.usuarios_list');
 
   @override
-  List<Usuario> get usuarios_list {
+  ObservableList<Usuario> get usuarios_list {
     _$usuarios_listAtom.reportRead();
     return super.usuarios_list;
   }
 
   @override
-  set usuarios_list(List<Usuario> value) {
+  set usuarios_list(ObservableList<Usuario> value) {
     _$usuarios_listAtom.reportWrite(value, super.usuarios_list, () {
       super.usuarios_list = value;
     });
@@ -69,9 +84,34 @@ mixin _$User_Mob on _User_Mob, Store {
     });
   }
 
+  final _$_User_MobActionController = ActionController(name: '_User_Mob');
+
+  @override
+  void addUsuario(String nome, String img) {
+    final _$actionInfo =
+        _$_User_MobActionController.startAction(name: '_User_Mob.addUsuario');
+    try {
+      return super.addUsuario(nome, img);
+    } finally {
+      _$_User_MobActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void removeUsuario(String nome, String img) {
+    final _$actionInfo = _$_User_MobActionController.startAction(
+        name: '_User_Mob.removeUsuario');
+    try {
+      return super.removeUsuario(nome, img);
+    } finally {
+      _$_User_MobActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
+pagina: ${pagina},
 usuarios_list: ${usuarios_list},
 id_Mesa: ${id_Mesa},
 id_cards_usados: ${id_cards_usados},
