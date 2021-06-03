@@ -24,6 +24,51 @@ mixin _$User_Mob on _User_Mob, Store {
     });
   }
 
+  final _$indexUserAtivoAtom = Atom(name: '_User_Mob.indexUserAtivo');
+
+  @override
+  int get indexUserAtivo {
+    _$indexUserAtivoAtom.reportRead();
+    return super.indexUserAtivo;
+  }
+
+  @override
+  set indexUserAtivo(int value) {
+    _$indexUserAtivoAtom.reportWrite(value, super.indexUserAtivo, () {
+      super.indexUserAtivo = value;
+    });
+  }
+
+  final _$cartasCelecionadaAtom = Atom(name: '_User_Mob.cartasCelecionada');
+
+  @override
+  String get cartasCelecionada {
+    _$cartasCelecionadaAtom.reportRead();
+    return super.cartasCelecionada;
+  }
+
+  @override
+  set cartasCelecionada(String value) {
+    _$cartasCelecionadaAtom.reportWrite(value, super.cartasCelecionada, () {
+      super.cartasCelecionada = value;
+    });
+  }
+
+  final _$desbloqueadoAtom = Atom(name: '_User_Mob.desbloqueado');
+
+  @override
+  bool get desbloqueado {
+    _$desbloqueadoAtom.reportRead();
+    return super.desbloqueado;
+  }
+
+  @override
+  set desbloqueado(bool value) {
+    _$desbloqueadoAtom.reportWrite(value, super.desbloqueado, () {
+      super.desbloqueado = value;
+    });
+  }
+
   final _$usuarios_listAtom = Atom(name: '_User_Mob.usuarios_list');
 
   @override
@@ -112,6 +157,9 @@ mixin _$User_Mob on _User_Mob, Store {
   String toString() {
     return '''
 pagina: ${pagina},
+indexUserAtivo: ${indexUserAtivo},
+cartasCelecionada: ${cartasCelecionada},
+desbloqueado: ${desbloqueado},
 usuarios_list: ${usuarios_list},
 id_Mesa: ${id_Mesa},
 id_cards_usados: ${id_cards_usados},

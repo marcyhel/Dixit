@@ -35,6 +35,7 @@ class _GerenciaUserState extends State<GerenciaUser> {
               onPressed: () {
                 Navigator.pop(context);
                 mob.pagina = 2;
+                mob.DistribuirCartas();
               },
               child: Text('Pronto'))
         ],
@@ -53,6 +54,7 @@ class _GerenciaUserState extends State<GerenciaUser> {
                       MaterialPageRoute(builder: (context) => CriaUser()));
                 },
                 child: Card(
+                  elevation: 4,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListTile(

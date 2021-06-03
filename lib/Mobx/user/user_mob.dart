@@ -5,13 +5,16 @@ part 'user_mob.g.dart';
 class User_Mob = _User_Mob with _$User_Mob;
 
 abstract class _User_Mob with Store {
-  _User_Mob() {
-    DistribuirCartas();
-    DistribuirCartas();
-  }
+  _User_Mob() {}
   @observable
   int pagina = 0;
+  @observable
+  int indexUserAtivo = 0;
 
+  @observable
+  String cartasCelecionada = '999';
+  @observable
+  bool desbloqueado = false;
   @observable
   var usuarios_list = ObservableList<Usuario>.of([
     Usuario('Marcy', (Random().nextInt(4)).toString()),
@@ -85,7 +88,7 @@ abstract class _User_Mob with Store {
     print('ff');
     for (var i = 0; i < usuarios_list.length; i++) {
       //print(usuarios_list[i].deck.cartas);
-      for (var j = 0; j < 3; j++) {
+      for (var j = 0; j < 4; j++) {
         var element = randomListItem(id_cards_usados);
 
         usuarios_list[i].deck.cartas.add(element);

@@ -1,5 +1,7 @@
 import 'package:dixit/Mobx/user/user_mob.dart';
 import 'package:dixit/screen/adicionarUsuario/gerenciaUser.dart';
+import 'package:dixit/screen/inGame/baralho_mao.dart';
+import 'package:dixit/screen/inGame/comfirmar.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
@@ -32,6 +34,8 @@ class _PrincipalState extends State<Principal> {
       children: [
         Menu(),
         GerenciaUser(),
+        Confirmar(),
+        Baralho_Mao(),
         Container(color: Colors.green),
       ],
     );

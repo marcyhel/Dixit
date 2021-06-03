@@ -56,6 +56,7 @@ class User extends StatelessWidget {
       ),
       key: UniqueKey(),
       child: Card(
+        elevation: 4,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(

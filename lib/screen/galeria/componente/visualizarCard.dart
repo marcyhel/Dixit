@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:photo_view/photo_view.dart';
+//import 'package:photo_view/photo_view.dart';
 
 // ignore: must_be_immutable
 class VisualizarCard extends StatefulWidget {
@@ -19,8 +19,8 @@ class _VisualizarCardState extends State<VisualizarCard> {
         appBar: AppBar(
           backgroundColor: Color(0xffD9653B),
         ),
-        body: PhotoView(
+        body:Text("ee"),); /*PhotoView(
           imageProvider: AssetImage(img),
-        ));
+        ));*/
   }
 }
